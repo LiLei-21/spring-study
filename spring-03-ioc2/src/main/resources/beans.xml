@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--使用无参的构造函数创建对象-->
+<!--    <bean id="User" class="com.li.pojo.User">-->
+<!--        <property name="user" value="messi"></property>-->
+<!--    </bean>-->
+
+
+        <!--下标赋值-->
+<!--        <bean id="User" class="com.li.pojo.User">-->
+<!--            <constructor-arg index="0" value="使用有参的构造方法创建对象(下标赋值)"></constructor-arg>-->
+<!--        </bean>-->
+
+        <!--通过类型创建（不建议使用）-->
+<!--        <bean id="User" class="com.li.pojo.User">-->
+<!--          <constructor-arg type="java.lang.String" value="使用有参的构造方法创建对象"></constructor-arg>-->
+<!--        </bean>-->
+
+        <!-- 通过参数名创建   -->
+        <bean id="User" class="com.li.pojo.User">
+            <constructor-arg name="User" value="使用有参的构造方法创建对象"></constructor-arg>
+        </bean>
+
+        <bean id="UserT" class="com.li.pojo.UserT">
+
+        </bean>
+
+<!--        别名-->
+        <alias name="User" alias="userNew"/>
+
+</beans>
